@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="theme-color" content="#d4148a" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         href="https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900,900italic"
+         rel="stylesheet"
+      />
+      <link rel="shortcut icon" href="./img/icons/logo.svg" type="image/x-icon" />
+      <link rel="stylesheet" href="./index.scss" />
+      <title>EvaRugs</title>
+   </head>
+   <body>
+      <div class="wrapper">
+         <a href="#" class="up"></a>
+         <header>
+            <include src="./components/header/header.html"></include>
+         </header>
+         <main>
+            <include src="./components/hero/hero.html"></include>
+            <include src="./components/about/about.html"></include>
+            <include src="./components/votes/votes.html"></include>
+         </main>
+         <footer>
+            <include src="./components/footer/footer.html"></include>
+         </footer>
+      </div>
+      <script src="./index.js" type="module"></script>
+   </body>
+</html>

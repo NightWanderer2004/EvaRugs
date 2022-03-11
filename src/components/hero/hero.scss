@@ -1,0 +1,117 @@
+.hero {
+   padding: 50px 0;
+   background-image: url('./img/hero/heroBG.png');
+   background-repeat: no-repeat;
+   background-size: 50%;
+   background-position: 85% 50%;
+   & header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & .logo {
+         display: grid;
+         align-items: center;
+         grid-auto-flow: column;
+         grid-column-gap: 11px;
+         & h2 {
+            font-size: 36px;
+            font-style: italic;
+            font-weight: 900;
+         }
+      }
+      & .links {
+         display: grid;
+         grid-auto-flow: column;
+         grid-column-gap: 25px;
+         & li a {
+            color: #737373;
+            font-size: 18px;
+            font-weight: 300;
+            transition: 0.2s;
+            &:hover {
+               color: #3e3e3e;
+            }
+         }
+         @media (max-width: 768px) {
+            display: none;
+         }
+      }
+
+      @media (max-width: 576px) {
+         justify-content: center;
+         margin-bottom: 40px;
+      }
+   }
+
+   & .heroBody {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & .tagline {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         & h1 {
+            font-size: clamp(25px, 5.2vw, 50px);
+            font-weight: 900;
+         }
+         & span {
+            font-size: 24px;
+            font-weight: 300;
+            margin: 10px 0 20px 0;
+         }
+         & button {
+            font-size: clamp(13px, 2vw, 20px);
+            font-weight: 900;
+            padding: clamp(12px, 2vw, 15px) clamp(20px, 2vw, 28px);
+            border-radius: 7px;
+            color: #fff;
+            transition: background 0.5s, transform 0.3s;
+            background: linear-gradient(140deg, #b90160 2.23%, #2e3192 99.51%);
+            background-size: 130%;
+            &:hover {
+               transform: scale(1.035);
+               background-position: 100% 50%;
+            }
+         }
+      }
+      @media (max-width: 576px) {
+         text-align: center;
+         justify-content: center;
+         & .tagline {
+            align-items: center;
+         }
+      }
+      & img {
+         pointer-events: none;
+         position: relative;
+         bottom: 35px;
+         min-width: 400px;
+         animation: hoverImg 4.25s ease-in infinite;
+         @media (max-width: 768px) {
+            min-width: 285px;
+         }
+         @media (max-width: 576px) {
+            display: none;
+         }
+      }
+   }
+   @media (max-width: 768px) {
+      background-size: 65%;
+   }
+   @media (max-width: 576px) {
+      background-position: center;
+      background-size: cover;
+   }
+}
+@keyframes hoverImg {
+   0% {
+      transform: translateY(10px);
+   }
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(10px);
+   }
+}

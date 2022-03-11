@@ -1,0 +1,122 @@
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+*::selection {
+   background-color: rgba(201, 9, 99, 0.774);
+   color: #fff;
+}
+*,
+:after,
+:before {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+aside,
+footer,
+header,
+nav {
+   display: block;
+}
+body,
+html {
+   scroll-behavior: smooth;
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+button,
+input,
+textarea {
+   font-family: inherit;
+}
+input::-ms-clear {
+   display: none;
+}
+button {
+   cursor: pointer;
+}
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+a,
+a:visited,
+a:hover {
+   text-decoration: none;
+}
+ul li {
+   list-style: none;
+}
+img {
+   vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+body {
+   font-family: Roboto, Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+.wrapper {
+   min-height: 100vh;
+   overflow: hidden;
+   transition: filter 0.1s;
+}
+.container {
+   padding: 0 25px;
+   max-width: 1180px;
+   margin: 0 auto;
+
+   @media (max-width: 768px) {
+      padding: 0 55px;
+   }
+   @media (max-width: 576px) {
+      padding: 0 30px;
+   }
+}
+.up {
+   z-index: 5;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 19px;
+   position: fixed;
+   width: 50px;
+   height: 50px;
+   border-radius: 100%;
+   background: linear-gradient(125deg, #f33d80 3.35%, #415ff3 91.43%);
+   background-size: 140% 140%;
+   bottom: -100%;
+   right: 0;
+   transition: 0.4s;
+   &.active {
+      bottom: 20px;
+      right: 20px;
+   }
+   &::before {
+      content: '\25B2';
+      color: #fff;
+   }
+   &:hover {
+      background-position: 100% 50%;
+   }
+}
+
+@import './components/modal/modal.scss';
+@import './components/header/header.scss';
+@import './components/hero/hero.scss';
+@import './components/about/about.scss';
+@import './components/votes/votes.scss';
+@import './components/footer/footer.scss';
